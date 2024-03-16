@@ -1,0 +1,61 @@
+﻿@model WebApplication1.ViewModels.GuestbookViewModel
+
+@{
+    ViewBag.Title = "Index";
+ }
+
+<h2>留言板</h2>
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <table>
+
+            @if(Model.DataList.Count!=0)
+            {
+                foreach(var item in Model.DataList)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayNameFor(model=>model.DataList[0].Id)
+                            </td>
+                            <td>
+                                @item.Id
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.DisplayNameFor(model=>model.DataList[0].Name)
+                            </td>
+                            <td>
+                                @item.Name
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.DisplayNameFor(model=>model.DataList[0].Content)
+                            </td>
+                            <td colspan="3">
+                                @item.Content
+                            </td>
+                        </tr>
+                    }
+            }
+                else
+                {
+                    <tr>
+                        <td colspan="4">
+                            <h1>尚未留言或無此資料</h1>
+                        </td>
+                    </tr>
+                }
+        </table>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
