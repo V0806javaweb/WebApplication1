@@ -20,11 +20,18 @@
             當前時間:@ViewData["Time"]<br />
             @{
                 @*在@大括號中輸出純文字要用@:前綴*@
+                @*要輸出變數內容須加上@前綴*@
+                @*變數與純文字之間若希望輸出時能連著沒有空格需@(變數名稱)*@
+                @*在Razor區塊中，字串內若帶有html標籤需@Html.Raw(變數名稱)*@
                 String prtStr = "這是Razor，C#語法在View頁面的輸出字串";
+                String scopeA = "<li>陳先生</li>";
+                String scopeB = "<li>李先生</li>";
                 @:Html:
                 <span>prtStr</span><br />
                 @:C#:
-                <span>@prtStr</span>
+                <span>@prtStr</span><br />
+                <span>歡迎普通市民@(@Html.Raw(scopeA))</span>
+                <span>@Html.Raw(scopeB)</span>
             }
         </div>
         <input type="submit" value="送出" />
