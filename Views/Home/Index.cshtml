@@ -2,6 +2,25 @@
     ViewBag.Title = "Home Page";
 }
 
+@section featured
+{
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title</h1>
+                <h1>@ViewBag.Message</h1>
+            </hgroup>
+            <p>
+                了解ASP.NET MVC
+                <a href="http://asp.net/mvc" title="ASP.NET MVC">微軟教你</a>
+                <br />
+                對ASP.NET 有疑問
+                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="problem solve">我不會</a>
+            </p>
+        </div>
+    </section>    
+}
+
 <div class="jumbotron">
     <h1>ASP.NET</h1>
     <h2>@ViewData["TInfo"]</h2>

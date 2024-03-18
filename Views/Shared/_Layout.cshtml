@@ -29,6 +29,9 @@
         </div>
     </div>
     <div class="container body-content">
+        @*加入Error.cshtml頁面*@
+        @RenderPage("~/Views/Shared/Error.cshtml")
+        @RenderSection("featured", required: false);
         @RenderBody()
         <hr />
         <footer>
