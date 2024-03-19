@@ -129,6 +129,7 @@
     </Compile>
     <Compile Include="Models\Guestbooks.cs" />
     <Compile Include="Models\TestFormModel.cs" />
+    <Compile Include="Models\TestModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\GuestbookService.cs" />
     <Compile Include="ViewModels\GuestbookViewModel.cs" />
