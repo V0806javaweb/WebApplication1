@@ -1,0 +1,22 @@
+﻿@model WebApplication1.Models.TestModel
+
+@{ ViewBag.Title = "TMAction";}
+
+@section scripts{
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+}
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.txtId)
+    @Html.TextBoxFor(m => m.txtId)
+    @Html.ValidationMessageFor(m => m.txtId)<br />
+    @Html.DisplayNameFor(m => m.txtPasswd)
+    @Html.PasswordFor(m => m.txtPasswd)
+    @Html.ValidationMessageFor(m => m.txtPasswd)<br />
+    @Html.DisplayTextFor(m => m.txtRemember)
+    @Html.CheckBoxFor(m => m.Remeber)<br />
+
+    <input type="submit" value="送出" />
+}

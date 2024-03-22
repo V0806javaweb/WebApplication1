@@ -96,5 +96,12 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
+
+        public ActionResult TMAction()
+        {
+            TestModel data = new TestModel();
+            data.txtRemember = "記住囉";
+            return View(data);
+        }
     }
 }
