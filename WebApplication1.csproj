@@ -123,6 +123,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\GuestbookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="ExtensionHelper\ImageHelpers.cs" />
     <Compile Include="Filters\CustomFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -177,6 +178,7 @@
     <Content Include="Views\Home\TestAction.cshtml" />
     <Content Include="Views\Home\TMAction.cshtml" />
     <Content Include="Views\Shared\View.cshtml" />
+    <Content Include="Views\Home\PartialText.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

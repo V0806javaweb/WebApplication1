@@ -103,5 +103,10 @@ namespace WebApplication1.Controllers
             data.txtRemember = "記住囉";
             return View(data);
         }
+
+        public ActionResult PartialText()
+        {
+            return PartialView();
+        }
     }
 }
